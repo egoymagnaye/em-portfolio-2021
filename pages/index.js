@@ -1,65 +1,99 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-export default function Home() {
+import Meta from "../components/Meta/Meta";
+import Layout from "../components/Layout/Layout";
+import PortfolioItem from "../components/Portfolio/PortfolioItem";
+
+import styles from "../styles/Animation.module.scss";
+
+import { getAllPortfolio } from "../utils/lib/portfolio";
+
+const Home = ({ allPortfolio }) => {
+  const mainHeadingRef = useRef(null);
+  const mainDescriptionRef = useRef(null);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+    tl.to(mainHeadingRef.current, {
+      opacity: 1,
+      y: 6,
+      duration: 0.6,
+    })
+      .to(
+        mainDescriptionRef.current,
+        { opacity: 1, y: -6, duration: 0.6 },
+        "-=0.4"
+      )
+      .to(imageRef.current, { opacity: 1, y: -6, duration: 0.6 }, "-=0.4");
+  }, []);
+
+  let portfolioMarkup = null;
+
+  portfolioMarkup = allPortfolio.map((item) => {
+    return <PortfolioItem key={item.id} {...item} />;
+  });
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+    <Layout>
+      <Meta
+        title="Next.js &amp; React Developer | Front-end Web Developer | Egoy Magnaye"
+        description="Hi, I'm Egoy Magnaye,  I develop websites & web applications. I'm primarily working on WordPress websites, but I also use Next.js &amp; React for my projects."
+      />
+      <div className="container mx-auto max-w-screen-lg md:max-w-screen-sm lg:max-w-screen-md mt-20 md:mt-32">
+        <div className="m-4 text-center">
+          <h2
+            ref={mainHeadingRef}
+            className={`${styles.fromTopHidden} text-5xl md:text-7xl font-semibold md:leading-tight mb-6 text-gray-em300 dark:text-yellow-em100`}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
+            Hey, I'm Egoy Magnaye
+          </h2>
+          <p
+            ref={mainDescriptionRef}
+            className={`${styles.fromBottomHidden} text-base md:text-xl leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white`}
           >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+            I'm a web developer based in the Philippines. I build websites and
+            web applications. I'm primarily working on WordPress websites, but I
+            also use Next.js and React for my other projects.
+          </p>
+          <span
+            className={`${styles.fromBottomHidden} block text-center mt-6 w-44 md:w-72 m-auto`}
+            ref={imageRef}
+          >
+            <img
+              src="/img/em-front-003.jpg"
+              alt=""
+              className={`rounded-full`}
+            />
+          </span>
         </div>
-      </main>
+      </div>
+      <div className="container mx-auto max-w-screen-lg xl:max-w-screen-xl my-20 md:my-32">
+        <div className="m-4 mb-6">
+          <h5
+            id="allPortfolio"
+            className="text-2xl md:text-3xl font-semibold md:leading-none text-gray-em300 dark:text-yellow-em100"
+          >
+            My Portfolio
+          </h5>
+          <p className="text-base md:text-lg leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white">
+            Here are some of my latest projects.
+          </p>
+        </div>
+        <ul className="flex flex-wrap mt-6">{portfolioMarkup}</ul>
+      </div>
+    </Layout>
+  );
+};
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export const getStaticProps = async () => {
+  const allPortfolio = await getAllPortfolio();
+
+  return {
+    props: { allPortfolio },
+  };
+};
+
+export default Home;

@@ -1,0 +1,65 @@
+@import "~hamburgers/_sass/hamburgers/hamburgers";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./header";
+
+@font-face {
+  font-family: "CormorantGaramond";
+  src: url("/fonts/cormomantgaramond/CormorantGaramond-Bold.eot");
+  src: url("/fonts/cormomantgaramond/CormorantGaramond-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/cormomantgaramond/CormorantGaramond-Bold.woff2") format("woff2"),
+    url("/fonts/cormomantgaramond/CormorantGaramond-Bold.woff") format("woff"),
+    url("/fonts/cormomantgaramond/CormorantGaramond-Bold.ttf")
+      format("truetype"),
+    url("/fonts/cormomantgaramond/CormorantGaramond-Bold.svg#CormorantGaramond-Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("/fonts/opensans/OpenSansLight.eot");
+  src: url("/fonts/opensans/OpenSansLight.eot") format("embedded-opentype"),
+    url("/fonts/opensans/OpenSansLight.woff2") format("woff2"),
+    url("/fonts/opensans/OpenSansLight.woff") format("woff"),
+    url("/fonts/opensans/OpenSansLight.ttf") format("truetype"),
+    url("/fonts/opensans/OpenSansLight.svg#OpenSansLight") format("svg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+}
+
+p,
+li {
+  @apply font-sans;
+}
+
+.dark {
+  .darkModePortfolio {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-yellow-em100;
+    }
+
+    p,
+    li {
+      @apply text-white;
+    }
+  }
+}

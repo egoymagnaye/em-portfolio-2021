@@ -1,0 +1,36 @@
+
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://egoymagnaye.com/</loc>
+		<lastmod>2021-02-08</lastmod>
+	</url>
+    <url>
+		<loc>https://egoymagnaye.com/about/</loc>
+		<lastmod>2021-02-08</lastmod>
+	</url>
+    <url>
+		<loc>https://egoymagnaye.com/contact/</loc>
+		<lastmod>2021-02-08</lastmod>
+	</url>
+	<url>
+		<loc>https://egoymagnaye.com/privacy-policy/</loc>
+		<lastmod>2021-02-18</lastmod>
+	</url>
+	<url>
+		<loc>https://egoymagnaye.com/sitemap/</loc>
+		<lastmod>2021-02-16</lastmod>
+	</url>
+    <url>
+		<loc>https://egoymagnaye.com/portfolio/akril/</loc>
+		<lastmod>2021-01-05</lastmod>
+	</url>
+    <url>
+		<loc>https://egoymagnaye.com/portfolio/voting-application/</loc>
+		<lastmod>2021-01-06</lastmod>
+	</url>
+    <url>
+		<loc>https://egoymagnaye.com/portfolio/signage-application/</loc>
+		<lastmod>2021-01-08</lastmod>
+	</url>
+</urlset>
