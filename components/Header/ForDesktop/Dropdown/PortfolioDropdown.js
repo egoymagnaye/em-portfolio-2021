@@ -23,7 +23,7 @@ const PortfolioDropdown = ({ dropdownRef, portfolio }) => {
           <p className="text-xs mb-1 text-gray-em300 dark:text-white">
             {techStacks}
           </p>
-          <h3 className="text-lg mb-1 font-bold">
+          <h3 className="text-lg mb-1 font-bold leading-tight">
             <Link href={`/portfolio/${slug}`}>
               <a className="text-gray-em300 dark:text-yellow-em100">{title}</a>
             </Link>

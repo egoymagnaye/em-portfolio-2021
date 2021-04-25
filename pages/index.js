@@ -44,22 +44,22 @@ const Home = ({ allPortfolio }) => {
       />
       <div className="container mx-auto max-w-screen-lg md:max-w-screen-sm lg:max-w-screen-md mt-20 md:mt-32">
         <div className="m-4 text-center">
-          <h2
+          <h1
             ref={mainHeadingRef}
             className={`${styles.fromTopHidden} text-5xl md:text-7xl font-semibold md:leading-tight mb-6 text-gray-em300 dark:text-yellow-em100`}
           >
             Hey, I'm Egoy Magnaye
-          </h2>
+          </h1>
           <p
             ref={mainDescriptionRef}
             className={`${styles.fromBottomHidden} text-base md:text-xl leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white`}
           >
             I'm a web developer based in the Philippines. I build websites and
-            web applications. I'm primarily working on WordPress websites, but I
-            also use Next.js and React for my other projects.
+            web applications. I'm primarily working on building WordPress
+            websites, but I'm also developing Next.js and React projects.
           </p>
           <span
-            className={`${styles.fromBottomHidden} block text-center mt-6 w-44 md:w-72 m-auto`}
+            className={`${styles.fromBottomHidden} block text-center mt-6 w-44 md:w-64 m-auto`}
             ref={imageRef}
           >
             <img
@@ -72,12 +72,12 @@ const Home = ({ allPortfolio }) => {
       </div>
       <div className="container mx-auto max-w-screen-lg xl:max-w-screen-xl my-20 md:my-32">
         <div className="m-4 mb-6">
-          <h5
+          <h4
             id="allPortfolio"
             className="text-2xl md:text-3xl font-semibold md:leading-none text-gray-em300 dark:text-yellow-em100"
           >
             My Portfolio
-          </h5>
+          </h4>
           <p className="text-base md:text-lg leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white">
             Here are some of my latest projects.
           </p>

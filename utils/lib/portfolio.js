@@ -3,7 +3,7 @@ import { decode } from "html-entities";
 
 export const getAllPortfolio = async () => {
   const { data } = await axios.get(
-    "https://cms.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,date,acf"
+    "https://api-portfolio.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,date,acf"
   );
 
   let portfolio = [];
@@ -42,7 +42,7 @@ export const getAllPortfolio = async () => {
 
 export const getSinglePortfolio = async (reqSlug) => {
   const { data } = await axios.get(
-    `https://cms.egoymagnaye.com/wp-json/wp/v2/portfolio/?slug=${reqSlug}&_fields=id,title,slug,date,acf`
+    `https://api-portfolio.egoymagnaye.com/wp-json/wp/v2/portfolio/?slug=${reqSlug}&_fields=id,title,slug,date,acf`
   );
 
   let portfolio = data[0];
@@ -74,7 +74,7 @@ export const getSinglePortfolio = async (reqSlug) => {
 
 export const getLatestPortfolio = async () => {
   const { data } = await axios.get(
-    "https://cms.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,acf&per_page=4"
+    "https://api-portfolio.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,acf&per_page=4"
   );
 
   let portfolio = [];
@@ -107,7 +107,7 @@ export const getLatestPortfolio = async () => {
 
 export const getAllPortfolioSlugs = async () => {
   const { data } = await axios.get(
-    "https://cms.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,date,acf"
+    "https://api-portfolio.egoymagnaye.com/wp-json/wp/v2/portfolio/?_fields=id,title,slug,date,acf"
   );
 
   return data.map((item) => {

@@ -22,7 +22,7 @@ const PortfolioDropdown = ({ dropdownPortfolioMenu, portfolio }) => {
     .map(({ id, title, slug, techStacks }, i) => {
       return (
         <li key={id} className="py-4">
-          <h4 className="mb-1 font-bold">
+          <h4 className="mb-1 font-bold leading-tight">
             <Link href={`/portfolio/${slug}`}>
               <a className="text-base text-gray-em300 dark:text-yellow-em100">
                 {title}

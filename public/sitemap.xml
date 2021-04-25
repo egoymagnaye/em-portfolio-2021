@@ -14,23 +14,23 @@
 		<lastmod>2021-02-08</lastmod>
 	</url>
 	<url>
-		<loc>https://egoymagnaye.com/privacy-policy/</loc>
-		<lastmod>2021-02-18</lastmod>
-	</url>
-	<url>
 		<loc>https://egoymagnaye.com/sitemap/</loc>
 		<lastmod>2021-02-16</lastmod>
 	</url>
     <url>
-		<loc>https://egoymagnaye.com/portfolio/akril/</loc>
+		<loc>https://egoymagnaye.com/portfolio/react-google-map-api-store-locator-widget</loc>
 		<lastmod>2021-01-05</lastmod>
 	</url>
     <url>
-		<loc>https://egoymagnaye.com/portfolio/voting-application/</loc>
+		<loc>https://egoymagnaye.com/portfolio/polling-app-built-using-react-and-redux</loc>
 		<lastmod>2021-01-06</lastmod>
 	</url>
     <url>
-		<loc>https://egoymagnaye.com/portfolio/signage-application/</loc>
+		<loc>https://egoymagnaye.com/portfolio/custom-product-enquiry-react-widgets</loc>
+		<lastmod>2021-01-08</lastmod>
+	</url>
+	<url>
+		<loc>https://egoymagnaye.com/portfolio/digital-signage-builder-developed-on-react-and-redux</loc>
 		<lastmod>2021-01-08</lastmod>
 	</url>
 </urlset>

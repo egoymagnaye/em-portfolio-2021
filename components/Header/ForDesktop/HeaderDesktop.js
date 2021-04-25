@@ -53,54 +53,56 @@ const HeaderDesktop = ({ switchThemeHandler, allPortfolio }) => {
   };
 
   return (
-    <header className="container mx-auto max-w-screen-lg xl:max-w-screen-xl hidden md:block">
-      <div className="flex justify-content items-center py-4 px-4">
-        <div className="flex justify-start lg:w-0 sm:flex-1 relative z-0">
-          <Logo />
+    <div className="sticky top-0 z-50 hidden md:block">
+      <header className="container mx-auto max-w-screen-lg xl:max-w-screen-xl bg-white dark:bg-gray-em300 transition duration-500">
+        <div className="flex justify-content items-center py-4 px-4">
+          <div className="flex justify-start lg:w-0 sm:flex-1 relative z-0">
+            <Logo />
+          </div>
+          <nav className="md:flex">
+            <ul className="flex sm:space-x-14">
+              <li className="flex items-center">
+                <Link href="/">
+                  <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li ref={dropdownTrigger} className="flex items-center relative">
+                <button
+                  className="flex items-center focus:outline-none sm:text-base lg:text-lg text-gray-em300 dark:text-white"
+                  onClick={toggleDropdownHandler}
+                >
+                  <span>Portfolio</span>
+                  <IoChevronDownOutline className="text-lg ml-2 text-gray-em300 dark:text-white" />
+                </button>
+                <PortfolioDropdown
+                  portfolio={allPortfolio}
+                  dropdownRef={dropdownMenu}
+                />
+              </li>
+              <li className="flex items-center">
+                <Link href="/about">
+                  <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <Link href="/contact">
+                  <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
+                    Contact
+                  </a>
+                </Link>
+              </li>
+              <li className="flex items-center">
+                <SwitchTheme switchThemeHandler={switchThemeHandler} />
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav className="md:flex">
-          <ul className="flex sm:space-x-14">
-            <li className="flex items-center">
-              <Link href="/">
-                <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li ref={dropdownTrigger} className="flex items-center relative">
-              <button
-                className="flex items-center focus:outline-none sm:text-base lg:text-lg text-gray-em300 dark:text-white"
-                onClick={toggleDropdownHandler}
-              >
-                <span>Portfolio</span>
-                <IoChevronDownOutline className="text-lg ml-2 text-gray-em300 dark:text-white" />
-              </button>
-              <PortfolioDropdown
-                portfolio={allPortfolio}
-                dropdownRef={dropdownMenu}
-              />
-            </li>
-            <li className="flex items-center">
-              <Link href="/about">
-                <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link href="/contact">
-                <a className="sm:text-base lg:text-lg text-gray-em300 dark:text-white">
-                  Contact
-                </a>
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <SwitchTheme switchThemeHandler={switchThemeHandler} />
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 };
 

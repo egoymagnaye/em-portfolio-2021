@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import {
   IoLogoReact,
@@ -51,7 +52,7 @@ const About = () => {
         "I think this is the common stack in building single-page applications if you're using React. This is the stack I'm using when I started learning React and I still use it to build SPAs. I'm using the Create React App tool for faster setup.",
     },
     {
-      stacks: "HTML, Sass, GSAP, Parcel",
+      stacks: "HTML, Sass, GSAP, Parcel, Tailwind.css",
       icons: [<FaHtml5 />, <IoLogoSass />, <SiGreensock />],
       description:
         "I use this stack if the client needs static websites only that can be served by any static hosting service or CDN.",
@@ -60,7 +61,7 @@ const About = () => {
       stacks: "Next.js, Tailwind.css",
       icons: [<IoLogoReact />, <SiTailwindcss />],
       description:
-        "These are my new tools for building static websites. This website was statically generated using Next.js. I've never used it to develop applications yet, but I think this will be my new tool in developing web apps and websites.",
+        "These are my new tools for building websites. This website was statically generated using Next.js. I've never used it to develop applications yet, but I think this will be my new tool in developing web apps and websites.",
     },
     {
       stacks: "Node.js, Express.js, MongoDB, Mongoose",
@@ -77,7 +78,7 @@ const About = () => {
       location: "Makati, Philippines",
       duration: "December 05, 2017 - February 24, 2021",
       duty:
-        "One of my primary duty was to developed and maintain the client's websites of a law firm. We're using WordPress as our main website platform. Some of their clients were book authors, law firms, and business owners.",
+        "Animation Outsourced is a full-service animation studio, with a production facility in the Philippines and with clients worldwide. Although I'm working with Animation Outsourced, I was assigned separately to one of their clients and my primary duty was to developed and maintain their websites. My client is a law firm in Mississippi USA and we used WordPress as our main website platform. ",
     },
     {
       position: "Front-end Web Developer",
@@ -85,7 +86,7 @@ const About = () => {
       location: "Makati, Philippines",
       duration: "February 22, 2016 - November 02, 2017",
       duty:
-        "My primary duty was to developed WordPress websites. I'm assigned to multiple clients and I'm the one who'll plan, develop, deploy and maintain their websites. I also learned how e-commerce works in this job because I've built e-commerce sites for some of their clients.",
+        "Starfish Internet Solution is a web agency in the Philippines that provides services like web development and graphic designs. My primary duty was to developed websites. I'm assigned to multiple clients and I'm the one who is responsible for planning, developing, deploying, and maintaining their websites. I also learned how e-commerce works in this job because I've built e-commerce sites for some of their clients.",
     },
   ]);
 
@@ -157,11 +158,13 @@ const About = () => {
               ref={mainDescriptionRef}
               className={`${styles.fromBottomHidden} text-base md:text-xl leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white`}
             >
-              Hi, I'm Egoy. I'm a developer with 5 years of experience
-              developing websites, I'm working remotely in the Philippines. Most
-              of my projects I'm working on were built on WordPress. I can also
-              develop custom themes and plugins for this content management
-              system.
+              Hi, I'm Egoy. I'm a web developer with over 6 years of experience
+              developing websites and I'm working remotely in the Philippines.
+              <br />
+              <br />
+              I've developed websites for my clients, mostly WordPress websites.
+              I can also develop custom themes and plugins for this content
+              management system.
               <br />
               <br />I can build single-page applications (SPAs) using React as
               well. Whenever my clients have complicated functionalities they
@@ -190,12 +193,23 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container mx-auto max-w-screen-lg my-20 md:my-28">
+      <div className="container mx-auto max-w-screen-lg mt-20 md:mt-28">
         <div className="mx-4">
           <h4 className="text-2xl md:text-3xl font-semibold md:leading-tight text-gray-em300 dark:text-yellow-em100">
             Work Experience
           </h4>
           <ul className="flex flex-wrap mt-6">{experienceMarkup}</ul>
+        </div>
+      </div>
+      <div className="container mx-auto max-w-sm mt-14 mb-20 md:mb-32 px-3">
+        <div className="text-center">
+          <Link href="/egoymagnaye-resume-2021.pdf">
+            <a target="_blank">
+              <h5 className=" bg-gray-em100 w- hover:bg-gray-em100 dark:bg-yellow-em100 text-white dark:text-gray-em100 text-2xl leading-6 font-semibold py-4 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200 hover:opacity-90">
+                View My Resume
+              </h5>
+            </a>
+          </Link>
         </div>
       </div>
     </Layout>
