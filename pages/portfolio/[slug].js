@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 import ReactHtmlParser from "react-html-parser";
 
@@ -14,12 +15,21 @@ import {
 } from "../../utils/lib/portfolio";
 
 const Portfolio = ({
-  portfolio: { title, techStacks, excerpt, description, featuredImg },
+  portfolio: {
+    title,
+    techStacks,
+    excerpt,
+    description,
+    featuredImg,
+    projectLink,
+  },
 }) => {
   const techStackRef = useRef(null);
   const mainHeadingRef = useRef(null);
   const excerptRef = useRef(null);
   const featImgRef = useRef(null);
+
+  console.log(projectLink);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
@@ -88,6 +98,17 @@ const Portfolio = ({
           >
             {ReactHtmlParser(description)}
           </div>
+          {projectLink && (
+            <div className="text-center max-w-xs mx-auto mt-16">
+              <Link href={projectLink}>
+                <a target="_blank">
+                  <h5 className=" bg-gray-em100 hover:bg-gray-em100 dark:bg-yellow-em100 text-white dark:text-black text-2xl leading-6 font-semibold py-4 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200 hover:opacity-90">
+                    Visit Website
+                  </h5>
+                </a>
+              </Link>
+            </div>
+          )}
         </div>
       </article>
     </Layout>

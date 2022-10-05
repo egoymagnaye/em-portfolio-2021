@@ -9,8 +9,8 @@ const MainFooter = () => {
         <div className="w-full md:w-1/2">
           <Logo footer />
           <p className="text-sm mt-4 text-gray-em300 dark:text-white">
-            &copy; 2021 Egoy Magnaye. All rights reserved. This website was
-            built using Next.js, Tailwind CSS, and other cool stuff.
+            &copy; 2022 Egoy Magnaye. All rights reserved. This website was
+            built using Next.js, Tailwind CSS &amp; other cool stuff.
           </p>
         </div>
         <div className="w-full md:w-1/2 mt-2">

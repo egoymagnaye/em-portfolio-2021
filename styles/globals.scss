@@ -42,7 +42,8 @@ h6 {
 }
 
 p,
-li {
+li,
+h1.subHeader {
   @apply font-sans;
 }
 

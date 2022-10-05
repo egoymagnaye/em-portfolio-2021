@@ -54,7 +54,7 @@ const HeaderDesktop = ({ switchThemeHandler, allPortfolio }) => {
 
   return (
     <div className="sticky top-0 z-50 hidden md:block">
-      <header className="container mx-auto max-w-screen-lg xl:max-w-screen-xl bg-white dark:bg-gray-em300 transition duration-500">
+      <header className="container mx-auto max-w-screen-lg xl:max-w-screen-xl bg-white dark:bg-black transition duration-500">
         <div className="flex justify-content items-center py-4 px-4">
           <div className="flex justify-start lg:w-0 sm:flex-1 relative z-0">
             <Logo />

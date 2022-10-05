@@ -23,6 +23,7 @@ export const getAllPortfolio = async () => {
     let excerpt = item.acf.excerpt;
     let featuredImg = item.acf.featured_image;
     let previewImg = item.acf.preview_image;
+    let projectType = item.acf.project_type ? item.acf.project_type : null;
 
     return {
       id,
@@ -34,6 +35,7 @@ export const getAllPortfolio = async () => {
       excerpt,
       featuredImg,
       previewImg,
+      projectType,
     };
   });
 
@@ -56,6 +58,8 @@ export const getSinglePortfolio = async (reqSlug) => {
   let excerpt = portfolio.acf.excerpt;
   let featuredImg = portfolio.acf.featured_image;
   let previewImg = portfolio.acf.preview_image;
+  let projectType = portfolio.acf.project_type;
+  let projectLink = portfolio.acf.project_link;
 
   portfolio = {
     id,
@@ -67,6 +71,8 @@ export const getSinglePortfolio = async (reqSlug) => {
     excerpt,
     featuredImg,
     previewImg,
+    projectType,
+    projectLink,
   };
 
   return portfolio;

@@ -77,16 +77,14 @@ const About = () => {
       company: "@ Animation Outsourced",
       location: "Makati, Philippines",
       duration: "December 2017 - February 2021",
-      duty:
-        "Animation Outsourced is a full-service animation studio, with a production facility in the Philippines and with clients worldwide. Although I'm working with Animation Outsourced, I was assigned separately to one of their clients and my primary duty was to developed and maintain their websites. My client is a law firm in Mississippi USA and we used WordPress as our main website platform. ",
+      duty: "Animation Outsourced is a full-service animation studio, with a production facility in the Philippines and with clients worldwide. Although I'm working with Animation Outsourced, I was assigned separately to one of their clients and my primary duty was to developed and maintain their websites. My client is a law firm in Mississippi USA and we used WordPress as our main website platform. ",
     },
     {
       position: "Front-end Web Developer",
       company: "@ Starfish Internet Solution",
       location: "Makati, Philippines",
       duration: "February 2016 - November 2017",
-      duty:
-        "Starfish Internet Solution is a web agency in the Philippines that provides services like web development and graphic designs. My primary duty was to developed websites. I'm assigned to multiple clients and I'm the one who is responsible for planning, developing, deploying, and maintaining their websites. I also learned how e-commerce works in this job because I've built e-commerce sites for some of their clients.",
+      duty: "Starfish Internet Solution is a web agency in the Philippines that provides services like web development and graphic designs. My primary duty was to developed websites. I'm assigned to multiple clients and I'm the one who is responsible for planning, developing, deploying, and maintaining their websites. I also learned how e-commerce works in this job because I've built e-commerce sites for some of their clients.",
     },
   ]);
 
@@ -158,13 +156,14 @@ const About = () => {
               ref={mainDescriptionRef}
               className={`${styles.fromBottomHidden} text-base md:text-xl leading-relaxed mt-3 md:mt-4 text-gray-em300 dark:text-white`}
             >
-              Hi, I'm Egoy. I'm a web developer with over 6 years of experience
-              developing websites and I'm working remotely in the Philippines.
+              Hi, I'm Egoy. I'm a web developer with almost 7 years of
+              experience in developing websites for personal and corporate
+              clients.
               <br />
               <br />
-              I've developed websites for my clients, mostly WordPress websites.
-              I can also develop custom themes and plugins for this content
-              management system.
+              I develop websites mostly using the WordPress CMS. I can also
+              develop custom themes and plugins for this content management
+              system.
               <br />
               <br />I can build single-page applications (SPAs) using React as
               well. Whenever my clients have complicated functionalities they
@@ -203,9 +202,9 @@ const About = () => {
       </div>
       <div className="container mx-auto max-w-sm mt-14 mb-20 md:mb-32 px-3">
         <div className="text-center">
-          <Link href="/egoymagnaye-resume-2021.pdf">
+          <Link href="/egoy-magnaye-resume.pdf">
             <a target="_blank">
-              <h5 className=" bg-gray-em100 w- hover:bg-gray-em100 dark:bg-yellow-em100 text-white dark:text-gray-em100 text-2xl leading-6 font-semibold py-4 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200 hover:opacity-90">
+              <h5 className=" bg-gray-em100 w- hover:bg-gray-em100 dark:bg-yellow-em100 text-white dark:text-black text-2xl leading-6 font-semibold py-4 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200 hover:opacity-90">
                 View My Resume
               </h5>
             </a>

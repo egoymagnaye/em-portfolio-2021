@@ -24,7 +24,7 @@ class MyDocument extends Document {
             ></script>
           </>
         </Head>
-        <body className="bg-white dark:bg-gray-em300 transition duration-500">
+        <body className="bg-white dark:bg-black transition duration-500">
           <Main />
           <NextScript />
         </body>
